@@ -1,0 +1,21 @@
+[package]
+name = "mini-http"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "A dependency-free HTTP/1.1 server built from scratch for learning"
+license = "MIT"
+
+[lib]
+name = "mini_http"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mini-http"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+lto = "thin"
+strip = true
